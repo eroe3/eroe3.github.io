@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Roe Digital | Home</title>
-    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
-    <script src="https://divonbriesen.github.io/teaching/tools/standards-check.js" defer></script>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3Ctext%20y='.9em'%20font-size='90'%3ER%3C/text%3E%3C/svg%3E">
+    <script src="https://divonbriesen.github.io/teaching/tools/standards-check.js" data-site="designfirm" defer></script>
     <style>
         /* Color palette: Navy #0B132B, Slate #1C2541, Teal #3AADA8, Mint #A7E8DC, White #F7FAFC */
         * {
@@ -21,21 +21,25 @@
         }
 
         header {
+            display: grid;
+            grid-template-columns: auto auto;
+            grid-template-rows: auto auto;
+            align-items: center;
+            justify-content: center;
+            column-gap: 1rem;
             background: #0b132b;
             color: #f7fafc;
             padding: 1.5rem;
         }
 
-        header section {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 1rem;
-            max-width: 960px;
-            margin: 0 auto;
+        header p {
+            margin: 0.25rem 0 0;
+            color: #f7fafc;
+            text-align: left;
         }
 
         header img {
+            grid-row: 1 / 3;
             width: 72px;
             height: 72px;
             object-fit: contain;
@@ -44,6 +48,7 @@
         h1 {
             margin: 0;
             color: #a7e8dc;
+            font-family: Georgia, "Times New Roman", serif;
             font-size: clamp(2rem, 5vw, 3.25rem);
             letter-spacing: 0.04em;
         }
@@ -66,6 +71,7 @@
         h2 {
             margin-top: 0;
             color: #1c2541;
+            font-family: Georgia, "Times New Roman", serif;
             font-size: 2rem;
             line-height: 1.2;
             border-bottom: 4px solid #3aada8;
@@ -75,6 +81,7 @@
         h3 {
             margin-top: 0;
             color: #1c2541;
+            font-family: Georgia, "Times New Roman", serif;
             line-height: 1.2;
         }
 
@@ -150,8 +157,17 @@
         }
 
         @media (max-width: 600px) {
-            header section {
-                flex-direction: column;
+            header {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            header img {
+                grid-row: auto;
+                margin: 0 auto;
+            }
+
+            header p {
                 text-align: center;
             }
 
@@ -164,13 +180,13 @@
             }
         }
     </style>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
-        <section aria-label="Roe Digital brand">
-            <img src="../images/roedigital.png" alt="Roe Digital logo">
-            <h1>Roe Digital</h1>
-        </section>
+        <img src="../images/roedigital.png" alt="Roe Digital logo">
+        <h1>Roe Digital</h1>
+        <p><em>Thoughtful design. Dependable development.</em></p>
     </header>
 
     <main>
@@ -202,7 +218,7 @@
         <section class="contact" aria-labelledby="contact-heading">
             <h3 class="contact-heading" id="contact-heading">Start a Project</h3>
             <address>
-                <p>Phone: <a href="tel:+17045550148">(704) 555-0148</a></p>
+                <p>Phone: (704) 555-0148</p>
                 <p>Email: <a href="mailto:hello@roedigital.example">hello@roedigital.example</a></p>
                 <p>Address: 215 Innovation Avenue, Charlotte, NC 28202</p>
             </address>

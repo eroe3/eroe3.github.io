@@ -3,10 +3,11 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title> Ethan Roe || ITIS 3135 || Front-End-Web-Development </title>
-		<script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+		<title>Ethan Roe's Ethereal Raven | ITIS3135 | Home</title>
+		<link rel="icon" href="images/cliffethan.jpg">
 		<script src="https://divonbriesen.github.io/teaching/tools/standards-check.js" defer></script>
 		<style>
+			/* White supports readability; navy, blue, teal, and pale blue provide contrast. */
 			* {
 				box-sizing: border-box;
 			}
@@ -38,12 +39,19 @@
 
 			h1 {
 				margin: 0;
+				font-family: Georgia, "Times New Roman", serif;
 				font-size: clamp(1.5rem, 4vw, 2.25rem);
 				line-height: 1.3;
 			}
 
 			h2 {
 				color: #174f73;
+				font-family: Georgia, "Times New Roman", serif;
+			}
+
+			header p {
+				margin-bottom: 0;
+				color: #c6e6f3;
 			}
 
 			p {
@@ -74,6 +82,20 @@
 				color: #9a4f00;
 			}
 
+			main img {
+				width: 110px;
+				height: 110px;
+				object-fit: contain;
+				border-radius: 18px;
+				box-shadow: 0 6px 16px rgba(23, 50, 77, 0.2);
+			}
+
+			footer {
+				margin-top: 2rem;
+				padding-top: 1rem;
+				border-top: 1px solid #91c8dc;
+			}
+
 			@media (max-width: 600px) {
 				body {
 					padding: 0 1.25rem 1.5rem;
@@ -86,36 +108,35 @@
 				}
 			}
 		</style>
+		<script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 	</head>
 	<body>
 		<header>
-			<h1>
-				Ethan Roe || ITIS 3135 || Front-End-Web-Development || Ethereal Raven
-			</h1>
+			<h1>Ethan Roe's Ethereal Raven | ITIS3135</h1>
+			<p><em>Building thoughtful experiences, one page at a time.</em></p>
 		</header>
-        <p class="links">
+        <!-- The links class lays out the primary course navigation. -->
+        <nav class="links" aria-label="Primary navigation">
             <a href="../index.html">Home</a>
             <a href="introduction.html">Introduction</a>
             <a href="#">Contract</a>
-        </p>
-		<h2>
-			Home
-		</h2>
-		<p>
-			Welcome to my webpage for ITIS3135
-		</p>
-        <p>
-            <a href="https://webpages.charlotte.edu/eroe3/">Webspace</a>
-            <a href="https://github.com/eroe3">Github.com</a>
-            <a href="https://eroe3.github.io/">github.io</a>
-            <a href="https://www.freecodecamp.org/eroe3">FreeCodeCamp</a>
-            <a href="https://www.codecademy.com/profiles/board9622751022">Codecademy</a>
-            <a href="https://www.linkedin.com/in/ethan-roe-63766b328/">LinkedIn</a>
-        </p>
-		<p>
-			Content Created by <a href="roedigital/index.html">Roe Digital</a>. All rights reserved.
-		</p>
-		<main></main>
-		<footer></footer>
+        </nav>
+		<main>
+			<h2>Home</h2>
+			<img src="images/roedigital.png" alt="Roe Digital logo">
+			<p>Welcome to my webpage for ITIS3135.</p>
+		</main>
+		<footer>
+			<p>
+				<a href="https://webpages.charlotte.edu/eroe3/">Webspace</a>
+				<a href="https://github.com/eroe3">Github.com</a>
+				<a href="https://eroe3.github.io/">github.io</a>
+				<a href="https://www.freecodecamp.org/eroe3">FreeCodeCamp</a>
+				<a href="https://www.codecademy.com/profiles/board9622751022">Codecademy</a>
+				<a href="https://www.linkedin.com/in/ethan-roe-63766b328/">LinkedIn</a>
+			</p>
+			<p>Content Created by <a href="roedigital/index.html">Roe Digital</a>. All rights reserved.</p>
+			<p>Certified in Responsive Web Design</p>
+		</footer>
 	</body>
 </html>
