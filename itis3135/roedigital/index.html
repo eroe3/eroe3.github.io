@@ -131,6 +131,23 @@
             margin: 0.25rem 0;
         }
 
+        .back-link {
+            display: inline-block;
+            margin: 0.5rem 0;
+            padding: 0.45rem 1rem;
+            background: #0b132b;
+            color: #f7fafc;
+            border-radius: 999px;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .back-link:hover,
+        .back-link:focus-visible {
+            background: #1c2541;
+            color: #a7e8dc;
+        }
+
         @media (max-width: 600px) {
             header section {
                 flex-direction: column;
@@ -193,6 +210,7 @@
 
     <footer>
         <p>Page created by Roe Digital</p>
+        <a class="back-link" href="../index.html">ITIS3135</a>
         <p>&copy; 2026 Roe Digital</p>
     </footer>
 </body>
