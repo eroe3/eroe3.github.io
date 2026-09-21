@@ -59,7 +59,7 @@
 				margin: 1.1rem auto;
 			}
 
-			.links {
+			nav {
 				display: flex;
 				flex-wrap: wrap;
 				justify-content: center;
@@ -102,7 +102,7 @@
 				}
 
 				header,
-				.links {
+				nav {
 					margin-right: -1.25rem;
 					margin-left: -1.25rem;
 				}
@@ -111,33 +111,15 @@
 		<script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 	</head>
 	<body>
-		<header>
-			<h1>Ethan Roe's Ethereal Raven | ITIS3135</h1>
-			<p><em>Building thoughtful experiences, one page at a time.</em></p>
-		</header>
-        <!-- The links class lays out the primary course navigation. -->
-        <nav class="links" aria-label="Primary navigation">
-            <a href="index.html">Home</a>
-            <a href="contract.html">Contract</a>
-            <a href="introduction.html">Introduction</a>
-            <a href="about.html">About</a>
-        </nav>
+		<!-- Shared course header and navigation are loaded from the components folder. -->
+		<div data-include="components/header.html"></div>
 		<main>
 			<h2>Home</h2>
 			<img src="images/roedigital.png" alt="Roe Digital logo">
 			<p>Welcome to my webpage for ITIS3135.</p>
 		</main>
-		<footer>
-			<p>
-				<a href="https://webpages.charlotte.edu/eroe3/itis3135/">Webspace</a>
-				<a href="https://github.com/eroe3">Github.com</a>
-				<a href="https://eroe3.github.io/itis3135/">github.io</a>
-				<a href="https://www.freecodecamp.org/eroe3">FreeCodeCamp</a>
-				<a href="https://www.codecademy.com/profiles/board9622751022">Codecademy</a>
-				<a href="https://www.linkedin.com/in/ethan-roe-63766b328/">LinkedIn</a>
-			</p>
-			<p>Content Created by <a href="roedigital.com/index.html">Roe Digital</a>. All rights reserved.</p>
-			<p>Certified in Responsive Web Design</p>
-		</footer>
+		<!-- Shared course footer is loaded from the components folder. -->
+		<div data-include="components/footer.html"></div>
+		<script src="scripts/HTMLInclude.min.js"></script>
 	</body>
 </html>

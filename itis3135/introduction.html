@@ -42,7 +42,7 @@
 				font-family: Georgia, "Times New Roman", serif;
 			}
 
-			h6 {
+			h3 {
 				margin: 0.75rem 0;
 				font-family: Georgia, "Times New Roman", serif;
 				font-size: clamp(1.25rem, 4vw, 1.8rem);
@@ -127,19 +127,11 @@
 		<script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 	</head>
     <body>
-		<header>
-			<h1>Ethan Roe's Ethereal Raven | ITIS3135</h1>
-			<p><em>Building thoughtful experiences, one page at a time.</em></p>
-		</header>
-        <nav aria-label="Primary navigation">
-            <a href="index.html">Home</a>
-            <a href="contract.html">Contract</a>
-            <a href="introduction.html">Introduction</a>
-            <a href="about.html">About</a>
-        </nav>
+		<!-- Shared course header and navigation are loaded from the components folder. -->
+		<div data-include="components/header.html"></div>
 		<main>
 			<h2>Introduction</h2>
-			<h6>Ethan Roe | Ethereal Raven</h6>
+			<h3>Ethan Roe | Ethereal Raven</h3>
 			<figure>
 				<img src="images/cliffethan.jpg" alt="Ethan hiking in the mountains">
 				<figcaption>Hiking near a mountain cliff.</figcaption>
@@ -196,17 +188,8 @@
 				– Peter Parker
 			</blockquote>
 		</main>
-		<footer>
-			<p>
-				<a href="https://webpages.charlotte.edu/eroe3/itis3135/">Webspace</a>
-				<a href="https://github.com/eroe3">Github.com</a>
-				<a href="https://eroe3.github.io/itis3135/">github.io</a>
-				<a href="https://www.freecodecamp.org/eroe3">FreeCodeCamp</a>
-				<a href="https://www.codecademy.com/profiles/board9622751022">Codecademy</a>
-				<a href="https://www.linkedin.com/in/ethan-roe-63766b328/">LinkedIn</a>
-			</p>
-			<p>Content Created by <a href="roedigital.com/index.html">Roe Digital</a>. All rights reserved.</p>
-			<p>Certified in Responsive Web Design</p>
-		</footer>
+		<!-- Shared course footer is loaded from the components folder. -->
+		<div data-include="components/footer.html"></div>
+		<script src="scripts/HTMLInclude.min.js"></script>
 	</body>
 </html>
