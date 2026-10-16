@@ -15,7 +15,27 @@
 		<main>
 			<h2>Survey</h2>
 			<img src="images/roedigital.png" alt="Roe Digital logo">
-			<p>This page will contain the freeCodeCamp survey form certification project.</p>
+			<p>Share how you prefer to learn and practice front-end development.</p>
+			<!-- Form-control IDs connect visible labels to their corresponding inputs. -->
+			<form action="#" method="get">
+				<label for="survey-name">Name</label>
+				<input id="survey-name" name="name" type="text" autocomplete="name" required>
+
+				<label for="survey-email">Email</label>
+				<input id="survey-email" name="email" type="email" autocomplete="email" required>
+
+				<label for="survey-hours">Weekly practice hours</label>
+				<input id="survey-hours" name="hours" type="number" min="0" max="40" required>
+
+				<label for="survey-focus">Preferred topic</label>
+				<select id="survey-focus" name="focus">
+					<option value="html">HTML</option>
+					<option value="css">CSS</option>
+					<option value="accessibility">Accessibility</option>
+				</select>
+
+				<button type="submit">Submit Survey</button>
+			</form>
 		</main>
 		<!-- Shared course footer is loaded from the components folder. -->
 		<div data-include="components/footer.html"></div>

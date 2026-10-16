@@ -153,6 +153,96 @@ blockquote {
 	border-radius: 8px;
 }
 
+form {
+	display: grid;
+	gap: 0.65rem;
+	max-width: 620px;
+	margin: 2rem auto;
+	padding: 1.5rem;
+	background: #e5f2f8;
+	border: 1px solid #91c8dc;
+	border-radius: 12px;
+	text-align: left;
+}
+
+input,
+select,
+button {
+	width: 100%;
+	padding: 0.7rem;
+	font: inherit;
+	border: 1px solid #174f73;
+	border-radius: 6px;
+}
+
+button {
+	margin-top: 0.5rem;
+	background: #17324d;
+	color: #f4faff;
+	font-weight: 700;
+	cursor: pointer;
+}
+
+button:hover,
+button:focus-visible {
+	background: #174f73;
+}
+
+.card-gallery {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 1rem;
+	text-align: center;
+}
+
+.card-gallery h3 {
+	grid-column: 1 / -1;
+	margin: 0;
+}
+
+.card-gallery figure {
+	margin: 0;
+	padding: 1rem;
+	background: #e5f2f8;
+	border: 2px solid #49a6c8;
+	border-radius: 12px;
+}
+
+.card-gallery figure img {
+	width: 90px;
+	height: 90px;
+	object-fit: contain;
+	border: 0;
+	box-shadow: none;
+}
+
+table {
+	width: min(100%, 760px);
+	margin: 2rem auto;
+	border-collapse: collapse;
+	background: #e5f2f8;
+}
+
+caption {
+	margin-bottom: 0.5rem;
+	color: #174f73;
+	font-family: Georgia, "Times New Roman", serif;
+	font-size: 1.25rem;
+	font-weight: 700;
+}
+
+th,
+td {
+	padding: 0.75rem;
+	border: 1px solid #91c8dc;
+	text-align: left;
+}
+
+th {
+	background: #17324d;
+	color: #f4faff;
+}
+
 footer {
 	margin-top: 2rem;
 	padding-top: 1rem;
@@ -177,5 +267,9 @@ footer a {
 
 	h6 {
 		white-space: normal;
+	}
+
+	.card-gallery {
+		grid-template-columns: 1fr;
 	}
 }
