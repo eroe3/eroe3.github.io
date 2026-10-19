@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Ethan Roe's airsoft journal covering milsim, speedsoft, recon, gear, seasons, locations, and field safety.">
+	<title>Overgrown Operations Airsoft ⌖ What</title>
+	<link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+	<style>
+		/* Palette: Night Forest #17241C, Moss #52634A, Lichen #A6B48E, Rust #B66A3C, Fog #E7EADF */
+		:root {
+			--night-forest: #17241c;
+			--moss: #52634a;
+			--lichen: #a6b48e;
+			--rust: #b66a3c;
+			--fog: #e7eadf;
+		}
+
+		* {
+			box-sizing: border-box;
+		}
+
+		html {
+			background: var(--night-forest);
+			scroll-behavior: smooth;
+		}
+
+		body {
+			margin: 0;
+			background:
+				linear-gradient(rgba(23, 36, 28, 0.88), rgba(23, 36, 28, 0.97)),
+				repeating-linear-gradient(135deg, var(--night-forest) 0 16px, #203127 16px 32px);
+			color: var(--fog);
+			font-family: "Trebuchet MS", Arial, sans-serif;
+			line-height: 1.65;
+			min-height: 100vh;
+		}
+
+		a {
+			color: var(--lichen);
+			text-decoration-thickness: 0.12em;
+			text-underline-offset: 0.2em;
+		}
+
+		a:hover,
+		a:focus-visible {
+			color: var(--fog);
+		}
+
+		.skip-link {
+			background: var(--rust);
+			color: var(--night-forest);
+			font-weight: 700;
+			left: 1rem;
+			padding: 0.6rem 1rem;
+			position: fixed;
+			top: -5rem;
+			z-index: 10;
+		}
+
+		.skip-link:focus {
+			top: 1rem;
+		}
+
+		header,
+		main,
+		footer {
+			margin-inline: auto;
+			max-width: 1120px;
+			width: calc(100% - 2rem);
+		}
+
+		header {
+			border-bottom: 1px solid var(--moss);
+			padding: 3rem 0 1.25rem;
+			text-align: center;
+		}
+
+		header p {
+			color: var(--lichen);
+			letter-spacing: 0.12em;
+			margin: 0.25rem 0 1.5rem;
+			text-transform: uppercase;
+		}
+
+		h1,
+		h2,
+		h3 {
+			font-family: "Palatino Linotype", Palatino, Georgia, serif;
+			line-height: 1.15;
+		}
+
+		h1 {
+			color: var(--fog);
+			font-size: clamp(2.15rem, 7vw, 4.75rem);
+			letter-spacing: 0.025em;
+			margin: 0;
+			text-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+		}
+
+		h1 span,
+		h2 span {
+			color: var(--rust);
+		}
+
+		nav ul {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 0.55rem;
+			justify-content: center;
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+
+		nav a {
+			background: rgba(82, 99, 74, 0.32);
+			border: 1px solid var(--moss);
+			border-radius: 999px;
+			color: var(--fog);
+			display: block;
+			font-weight: 700;
+			padding: 0.45rem 0.85rem;
+			text-decoration: none;
+		}
+
+		nav a:hover,
+		nav a:focus-visible,
+		nav a[aria-current="page"] {
+			background: var(--rust);
+			border-color: var(--rust);
+			color: var(--night-forest);
+		}
+
+		main {
+			padding-block: 2rem;
+		}
+
+		section {
+			animation: reveal 280ms ease-out;
+			background: rgba(231, 234, 223, 0.055);
+			border: 1px solid var(--moss);
+			border-radius: 1.25rem;
+			box-shadow: 0 22px 55px rgba(0, 0, 0, 0.22);
+			padding: clamp(1.2rem, 4vw, 3rem);
+		}
+
+		section[hidden] {
+			display: none;
+		}
+
+		section > p:first-of-type {
+			font-size: 1.1rem;
+			max-width: 72ch;
+		}
+
+		h2 {
+			color: var(--fog);
+			font-size: clamp(1.8rem, 5vw, 3.25rem);
+			margin: 0 0 1rem;
+		}
+
+		h3 {
+			color: var(--lichen);
+			font-size: 1.35rem;
+			margin-top: 0;
+		}
+
+		figure {
+			background: var(--night-forest);
+			border: 1px solid var(--moss);
+			border-radius: 1rem;
+			margin: 2rem 0;
+			overflow: hidden;
+		}
+
+		figure img {
+			display: block;
+			height: auto;
+			max-height: 650px;
+			object-fit: cover;
+			width: 100%;
+		}
+
+		figcaption,
+		figure > p {
+			margin: 0;
+			padding: 0.8rem 1rem 0;
+		}
+
+		figure > p {
+			color: var(--lichen);
+			font-size: 0.9rem;
+			padding-bottom: 1rem;
+		}
+
+		.grid,
+		.stats,
+		.prompt-grid {
+			display: grid;
+			gap: 1rem;
+			grid-template-columns: repeat(3, minmax(0, 1fr));
+			margin-block: 1.5rem;
+		}
+
+		.card,
+		.stat,
+		.prompt-card {
+			background: rgba(82, 99, 74, 0.24);
+			border-left: 0.3rem solid var(--rust);
+			border-radius: 0.65rem;
+			padding: 1rem;
+		}
+
+		.stat strong {
+			color: var(--rust);
+			display: block;
+			font-family: "Palatino Linotype", Palatino, Georgia, serif;
+			font-size: 1.8rem;
+		}
+
+		ul,
+		ol {
+			padding-left: 1.35rem;
+		}
+
+		li::marker {
+			color: var(--rust);
+		}
+
+		table {
+			border-collapse: collapse;
+			margin-block: 1.5rem;
+			width: 100%;
+		}
+
+		caption {
+			color: var(--lichen);
+			font-weight: 700;
+			padding-bottom: 0.6rem;
+			text-align: left;
+		}
+
+		th,
+		td {
+			border-bottom: 1px solid var(--moss);
+			padding: 0.75rem;
+			text-align: left;
+			vertical-align: top;
+		}
+
+		th {
+			background: rgba(82, 99, 74, 0.35);
+			color: var(--lichen);
+		}
+
+		blockquote {
+			border-left: 0.35rem solid var(--rust);
+			font-family: "Palatino Linotype", Palatino, Georgia, serif;
+			font-size: 1.3rem;
+			margin: 1.5rem 0;
+			padding: 0.25rem 1.25rem;
+		}
+
+		.source-list li {
+			margin-bottom: 0.8rem;
+		}
+
+		footer {
+			border-top: 1px solid var(--moss);
+			padding: 1.5rem 0 2.5rem;
+			text-align: center;
+		}
+
+		.validation-links {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 0.6rem;
+			justify-content: center;
+			margin-block: 1rem;
+		}
+
+		.validation-links a {
+			border: 1px solid var(--lichen);
+			border-radius: 0.45rem;
+			padding: 0.35rem 0.7rem;
+			text-decoration: none;
+		}
+
+		@keyframes reveal {
+			from {
+				opacity: 0;
+				transform: translateY(0.5rem);
+			}
+		}
+
+		@media (max-width: 760px) {
+			.grid,
+			.stats,
+			.prompt-grid {
+				grid-template-columns: 1fr;
+			}
+
+			header {
+				padding-top: 2rem;
+			}
+
+			table {
+				font-size: 0.92rem;
+			}
+		}
+
+		@media (prefers-reduced-motion: reduce) {
+			html {
+				scroll-behavior: auto;
+			}
+
+			section {
+				animation: none;
+			}
+		}
+	</style>
+	<script src="https://divonbriesen.github.io/teaching/tools/standards-check.js" defer></script>
+	<script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+	<a class="skip-link" href="#content">Skip to content</a>
+	<header>
+		<h1>Overgrown Operations Airsoft</h1>
+		<p>Ethan Roe's field journal</p>
+		<nav aria-label="Hobby pages">
+			<ul>
+				<li><a href="#what" aria-current="page">What</a></li>
+				<li><a href="#who">Who</a></li>
+				<li><a href="#when">When</a></li>
+				<li><a href="#where">Where</a></li>
+				<li><a href="#how">How</a></li>
+				<li><a href="#why">Why</a></li>
+				<li><a href="#ai-prompts">AI Prompts</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<main id="content">
+		<!-- IDs connect navigation to SPA pages; classes group repeated visual patterns; divs form non-semantic card layouts; spans color the decorative divider. -->
+		<section id="what" tabindex="-1">
+			<h2>What</h2>
+			<p>Airsoft is a team-based sport built around movement, communication, precision, and honest play. Players use replicas that launch lightweight plastic BBs in organized games with clear field rules and protective equipment.</p>
+			<p>I enjoy both sides of the sport: slower, objective-driven military simulations and quick speedsoft rounds. One rewards patience and observation; the other rewards fast decisions and aggressive movement.</p>
+			<figure>
+				<img src="images/sanatorium-recon-ai.jpg" width="1400" height="933" alt="Protected airsoft scout moving through a mossy abandoned building">
+				<p><em>AI prompt: A cinematic adult airsoft scout in full eye and face protection moving through a forest-reclaimed abandoned sanatorium, with safe orange-tipped equipment and no combat.</em></p>
+				<figcaption>A recon player moving through an overgrown abandoned site—the atmosphere that inspired this journal.</figcaption>
+			</figure>
+			<div class="stats">
+				<p class="stat"><strong>10 years</strong>around the hobby</p>
+				<p class="stat"><strong>2 styles</strong>milsim and speedsoft</p>
+				<p class="stat"><strong>4 states</strong>visited for events</p>
+			</div>
+		</section>
+
+		<section id="who" tabindex="-1" hidden>
+			<h2>Who</h2>
+			<p>I first became interested in airsoft through my older brother. I started with paintball when I was younger, but the equipment, strategy, and variety of airsoft pulled me in more strongly.</p>
+			<p>During milsim games I usually work in scout and reconnaissance roles, primarily as a sniper. That means staying patient, reading the terrain, and giving my team useful information instead of chasing every shot.</p>
+			<p>For speedsoft, I switch gears and run a modified M4. My favorite piece of equipment is still my custom sniper build, which represents roughly $800 of careful upgrades and tuning.</p>
+			<figure>
+				<img src="images/airsoft-sniper-open.jpg" width="604" height="402" alt="Airsoft player in a ghillie suit lying in woodland cover">
+				<p><em>AI prompt: None. This is an open-source photograph selected to represent the scout and sniper role.</em></p>
+				<figcaption>Recon rewards camouflage, restraint, and awareness. Photo by Kokanee, released to the public domain via Wikimedia Commons.</figcaption>
+			</figure>
+			<div class="grid">
+				<article class="card"><h3>Recon</h3><p>Observe routes, locate objectives, and relay useful information.</p></article>
+				<article class="card"><h3>Sniper</h3><p>Choose positions carefully and make patience part of the game.</p></article>
+				<article class="card"><h3>Speedsoft</h3><p>Use a tuned M4 when the format calls for speed and close teamwork.</p></article>
+			</div>
+		</section>
+
+		<section id="when" tabindex="-1" hidden>
+			<h2>When</h2>
+			<p>Spring fields are comfortable and green, but winter is my favorite season. Cooler temperatures make heavy gear easier to wear, prevent overheating, and create a sharper atmosphere on outdoor fields.</p>
+			<figure>
+				<img src="images/winter-recon-ai.jpg" width="1400" height="933" alt="Two fully protected airsoft scouts observing a winter woodland field">
+				<p><em>AI prompt: Two adult airsoft scouts in full protection observing a quiet winter woodland ruin, binoculars visible, equipment safely slung, cinematic and nonviolent.</em></p>
+				<figcaption>Winter conditions suit long games and layered equipment without the heat of summer.</figcaption>
+			</figure>
+			<table>
+				<caption>My seasonal field guide</caption>
+				<thead><tr><th>Season</th><th>Best feature</th><th>Plan for</th></tr></thead>
+				<tbody>
+					<tr><td>Winter</td><td>Cooler play and better gear options</td><td>Warm hands and reliable batteries</td></tr>
+					<tr><td>Spring</td><td>Mild weather and fresh woodland cover</td><td>Mud and changing forecasts</td></tr>
+					<tr><td>Summer</td><td>Long daylight for events</td><td>Water, shade, and lighter equipment</td></tr>
+					<tr><td>Fall</td><td>Cool air and changing terrain</td><td>Earlier sunsets and fallen leaves</td></tr>
+				</tbody>
+			</table>
+		</section>
+
+		<section id="where" tabindex="-1" hidden>
+			<h2>Where</h2>
+			<p>I have traveled to airsoft events in New York, New Jersey, Pennsylvania, and Virginia. Each trip changes the terrain, the teams, and the way an objective has to be approached.</p>
+			<p>My most memorable event took place at an abandoned sanatorium. Its long corridors, worn rooms, and overgrown exterior made positioning and communication feel completely different from a normal field.</p>
+			<figure>
+				<img src="images/rock-field-open.jpg" width="1400" height="1050" alt="Four airsoft players preparing to move across a rocky outdoor field">
+				<p><em>AI prompt: None. This is an open-source photograph chosen to show how terrain influences team movement.</em></p>
+				<figcaption>Outdoor terrain creates natural routes and observation points. Photo by Michael Brown, resized, <a href="https://creativecommons.org/licenses/by/2.5/">CC BY 2.5</a>, via Wikimedia Commons.</figcaption>
+			</figure>
+			<div class="grid">
+				<article class="card"><h3>Woodland</h3><p>Good for concealment, recon routes, and longer engagements.</p></article>
+				<article class="card"><h3>Indoor</h3><p>Tighter spaces favor quick communication and controlled movement.</p></article>
+				<article class="card"><h3>Abandoned sites</h3><p>Memorable environments that demand awareness and careful footing.</p></article>
+			</div>
+		</section>
+
+		<section id="how" tabindex="-1" hidden>
+			<h2>How</h2>
+			<p>A good day starts with equipment that fits the field and a role that helps the team. I bring my sniper setup for patient reconnaissance or my modified M4 when the pace is fast.</p>
+			<figure>
+				<img src="images/speedsoft-m4-ai.jpg" width="1400" height="933" alt="Protected airsoft player checking a modified M4 replica in a staging area">
+				<p><em>AI prompt: An adult speedsoft player in full face and eye protection safely checking a customized orange-tipped M4 replica at an indoor arena staging bench.</em></p>
+				<figcaption>A pre-game equipment check in a controlled staging area.</figcaption>
+			</figure>
+			<div class="grid">
+				<article class="card"><h3>Pick the role</h3><p>Match the loadout to recon, support, or fast objective play.</p></article>
+				<article class="card"><h3>Check the kit</h3><p>Test power limits, batteries, magazines, footwear, and hydration.</p></article>
+				<article class="card"><h3>Play clean</h3><p>Communicate, call hits, respect boundaries, and keep the game moving.</p></article>
+			</div>
+			<h3>Safety without the lecture</h3>
+			<ul>
+				<li>Wear field-rated eye protection the entire time you are in a live-play area.</li>
+				<li>Keep replicas safe in staging areas and follow every field's power and distance rules.</li>
+				<li>Know the terrain, bring water, use solid footwear, and speak up if something is unsafe.</li>
+			</ul>
+		</section>
+
+		<section id="why" tabindex="-1" hidden>
+			<h2>Why</h2>
+			<p>Airsoft gives me a place to put my energy into something I genuinely enjoy. Once a game begins, attention narrows to the terrain, the objective, and the people beside me.</p>
+			<p>It also balances two different challenges. Recon asks me to slow down and notice details, while speedsoft pushes reaction time and confidence. Both reward improvement without ever feeling exactly the same.</p>
+			<blockquote>For me, the best events are an escape, a test of teamwork, and a story I still want to tell afterward.</blockquote>
+			<figure>
+				<img src="images/three-players-open.jpg" width="274" height="206" alt="Three airsoft teammates defending an outdoor area together">
+				<p><em>AI prompt: None. This open-source photograph was selected to represent the teamwork at the center of the hobby.</em></p>
+				<figcaption>Teamwork turns an individual role into a shared objective. Photo by Glassybubbles, public domain/CC0, via Wikimedia Commons.</figcaption>
+			</figure>
+		</section>
+
+		<section id="ai-prompts" tabindex="-1" hidden>
+			<h2>AI Prompts</h2>
+			<p>I used AI to help organize, write, and code this one-page hobby site. The personal history and opinions are mine; AI helped shape them into a clear web experience. Three photorealistic images were generated specifically for this project, and four photographs came from open-source collections.</p>
+			<figure>
+				<img src="images/airsoft-players-open.jpg" width="1400" height="934" alt="Group of protected airsoft players standing together at an indoor venue">
+				<p><em>AI prompt: None. This is an open-source photograph used to distinguish sourced photography from the generated scenes.</em></p>
+				<figcaption>Airsoft players at an indoor venue. Photo by Tasleeh, resized, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>, via Wikimedia Commons.</figcaption>
+			</figure>
+			<div class="prompt-grid">
+				<article class="prompt-card"><h3>Site prompt</h3><p>Build a responsive, accessible airsoft hobby SPA for Ethan Roe with forest-and-overgrown-building styling, seven required sections, embedded CSS, and hash navigation.</p></article>
+				<article class="prompt-card"><h3>Writing prompt</h3><p>Use Ethan's ten-year history, recon and sniper role, modified M4, custom sniper, interstate events, winter preference, and sanatorium memory in a natural first-person site.</p></article>
+				<article class="prompt-card"><h3>Image direction</h3><p>Create cinematic photorealistic adult airsoft scenes with full protective gear, visible orange tips, safe handling, no firing, no injuries, and no logos or text.</p></article>
+			</div>
+			<h3>Open-source image credits</h3>
+			<ul class="source-list">
+				<li><a href="https://commons.wikimedia.org/wiki/File:Airsoft_sniper.jpg">Airsoft sniper</a> by Kokanee, public domain.</li>
+				<li><a href="https://commons.wikimedia.org/wiki/File:Airsoft_players.jpg">Airsoft players</a> by Tasleeh, CC BY-SA 4.0; resized.</li>
+				<li><a href="https://commons.wikimedia.org/wiki/File:Three_airsoft_players_defending_an_area.jpg">Three airsoft players defending an area</a> by Glassybubbles, public domain/CC0.</li>
+				<li><a href="https://commons.wikimedia.org/wiki/File:AirsoftRockField.jpg">AirsoftRockField</a> by Michael Brown, CC BY 2.5; resized.</li>
+			</ul>
+		</section>
+	</main>
+
+	<footer>
+		<p>Page created by <a href="../roedigital.com/index.html">Roe Digital</a> <span aria-hidden="true">⌖</span> <a href="../index.html">ITIS 3135</a></p>
+		<nav class="validation-links" aria-label="Page validation">
+			<a href="https://validator.w3.org/check?uri=referer">Validate HTML</a>
+			<a href="https://jigsaw.w3.org/css-validator/check/referer">Validate CSS</a>
+			<a href="https://wave.webaim.org/report#/https://webpages.charlotte.edu/eroe3/itis3135/hobby/">Check Accessibility</a>
+		</nav>
+		<p>© 2026 Ethan Roe</p>
+	</footer>
+
+	<script src="scripts/hobby.js"></script>
+</body>
+</html>
