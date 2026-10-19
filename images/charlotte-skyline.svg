@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" role="img" aria-labelledby="title description">
+	<title id="title">Charlotte skyline at sunset</title>
+	<desc id="description">A stylized navy Charlotte skyline beneath a pale blue and gold evening sky.</desc>
+	<defs>
+		<linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+			<stop offset="0" stop-color="#cfe4f6"/>
+			<stop offset="1" stop-color="#fff9c4"/>
+		</linearGradient>
+	</defs>
+	<rect width="960" height="420" fill="url(#sky)"/>
+	<circle cx="760" cy="105" r="54" fill="#e0ad00"/>
+	<path fill="#263b62" d="M0 360V292h88v-46h70v72h55V198h85v162h68V251h72v109h55V118h21V77h14V28h12v49h14v41h21v242h58V220h81v140h57V277h73v83h77v60H0Z"/>
+	<path fill="#172033" d="M0 372h960v48H0zM105 360h690v18H105z"/>
+	<g fill="#fff9c4">
+		<path d="M231 221h16v18h-16zm28 0h16v18h-16zm126 52h14v16h-14zm26 0h14v16h-14zm113-123h13v18h-13zm25 0h13v18h-13zm100 94h15v18h-15zm28 0h15v18h-15z"/>
+	</g>
+</svg>
