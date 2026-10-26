@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Ethan Roe's Ethereal Raven | ITIS3135 | Survey</title>
+		<title>Ethan Roe's Ethereal Raven | ITIS3135 | Expedition Survey</title>
 		<link rel="icon" href="images/cliffethan.jpg">
 		<link rel="stylesheet" href="styles/default.css">
 		<script src="https://divonbriesen.github.io/teaching/tools/standards-check.js" defer></script>
@@ -13,28 +13,48 @@
 		<!-- Shared course header and navigation are loaded from the components folder. -->
 		<div data-include="components/header.html"></div>
 		<main>
-			<h2>Survey</h2>
-			<img src="images/roedigital.png" alt="Roe Digital logo">
-			<p>Share how you prefer to learn and practice front-end development.</p>
-			<!-- Form-control IDs connect visible labels to their corresponding inputs. -->
-			<form action="#" method="get">
-				<label for="survey-name">Name</label>
-				<input id="survey-name" name="name" type="text" autocomplete="name" required>
+			<h2 id="title">Expedition Survey</h2>
+			<img src="images/ethereal-raven-emblem.svg" alt="Ethereal Raven Outfitters compass-and-raven emblem">
+			<p id="description">Help Ethereal Raven Outfitters prepare a field experience that matches your interests, comfort, and preferred pace.</p>
+			<!-- Form IDs connect labels to controls; choice classes align grouped radio buttons and checkboxes. -->
+			<form id="survey-form" action="#" method="get">
+				<label id="name-label" for="name">Name</label>
+				<input id="name" name="name" type="text" placeholder="Enter your name" autocomplete="name" required>
 
-				<label for="survey-email">Email</label>
-				<input id="survey-email" name="email" type="email" autocomplete="email" required>
+				<label id="email-label" for="email">Email</label>
+				<input id="email" name="email" type="email" placeholder="you@example.com" autocomplete="email" required>
 
-				<label for="survey-hours">Weekly practice hours</label>
-				<input id="survey-hours" name="hours" type="number" min="0" max="40" required>
+				<label id="number-label" for="number">Years of outdoor experience</label>
+				<input id="number" name="experience" type="number" min="0" max="60" placeholder="0–60">
 
-				<label for="survey-focus">Preferred topic</label>
-				<select id="survey-focus" name="focus">
-					<option value="html">HTML</option>
-					<option value="css">CSS</option>
-					<option value="accessibility">Accessibility</option>
+				<label for="dropdown">Preferred expedition</label>
+				<select id="dropdown" name="expedition" required>
+					<option value="">Choose one</option>
+					<option value="forest">Forest Navigation</option>
+					<option value="urban">Urban Recon Workshop</option>
+					<option value="winter">Winter Fieldcraft</option>
+					<option value="night">Night Observation</option>
 				</select>
 
-				<button type="submit">Submit Survey</button>
+				<fieldset>
+					<legend>Preferred team pace</legend>
+					<label class="choice"><input type="radio" name="pace" value="deliberate" checked> Deliberate and observant</label>
+					<label class="choice"><input type="radio" name="pace" value="balanced"> Balanced</label>
+					<label class="choice"><input type="radio" name="pace" value="fast"> Fast and challenging</label>
+				</fieldset>
+
+				<fieldset>
+					<legend>Skills you want to practice</legend>
+					<label class="choice"><input type="checkbox" name="skills" value="navigation"> Map and compass navigation</label>
+					<label class="choice"><input type="checkbox" name="skills" value="observation"> Observation and reporting</label>
+					<label class="choice"><input type="checkbox" name="skills" value="camp"> Camp setup</label>
+					<label class="choice"><input type="checkbox" name="skills" value="communication"> Team communication</label>
+				</fieldset>
+
+				<label for="comments">Anything else your guide should know?</label>
+				<textarea id="comments" name="comments" rows="5" placeholder="Accessibility needs, goals, or questions"></textarea>
+
+				<button id="submit" type="submit">Send Field Survey</button>
 			</form>
 		</main>
 		<!-- Shared course footer is loaded from the components folder. -->

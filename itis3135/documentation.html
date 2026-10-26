@@ -14,20 +14,26 @@
 		<div data-include="components/header.html"></div>
 		<main>
 			<h2>Instructions</h2>
-			<img src="images/roedigital.png" alt="Roe Digital logo">
-			<p>Follow these instructions to update, validate, and publish the course website.</p>
-			<section>
-				<h3>Update the Project</h3>
-				<p>Edit the appropriate HTML page while keeping shared navigation in the components folder and shared presentation rules in the default stylesheet.</p>
-			</section>
-			<section>
-				<h3>Validate the Work</h3>
-				<p>Open the page through a web server, review Accumulus and Vicunadator results, and resolve genuine HTML, CSS, accessibility, and course-rule failures.</p>
-			</section>
-			<section>
-				<h3>Publish Both Copies</h3>
-				<p>Push the committed files to GitHub Pages, upload the same files to Charlotte through SFTP, and confirm that both public versions match.</p>
-			</section>
+			<img src="images/ethereal-raven-emblem.svg" alt="Ethereal Raven Outfitters compass-and-raven emblem">
+			<p>Ethereal Raven Field Manual: a practical introduction to preparing for a safe day outdoors.</p>
+			<!-- Documentation IDs support same-page navigation; classes style repeated chapters, and a div groups them without implying another document heading. -->
+			<aside id="documentation-sidebar">
+				<nav id="navbar" aria-label="Field manual chapters">
+					<h3>Field Manual</h3>
+					<a class="nav-link" href="#Plan_the_Route">Plan the Route</a>
+					<a class="nav-link" href="#Pack_the_Essentials">Pack the Essentials</a>
+					<a class="nav-link" href="#Read_the_Terrain">Read the Terrain</a>
+					<a class="nav-link" href="#Communicate_Clearly">Communicate Clearly</a>
+					<a class="nav-link" href="#Leave_No_Trace">Leave No Trace</a>
+				</nav>
+			</aside>
+			<div id="main-doc">
+				<section class="main-section" id="Plan_the_Route"><h3>Plan the Route</h3><p>Begin with a route that matches the group, daylight, and forecast. Mark a turnaround time before leaving.</p><p>Write the basic plan in a compact format:</p><code>START → CHECKPOINT → TURNAROUND → RETURN</code><ul><li>Share the route with someone who is not on the trip.</li><li>Carry an offline map and a physical backup.</li></ul></section>
+				<section class="main-section" id="Pack_the_Essentials"><h3>Pack the Essentials</h3><p>Build the pack around water, weather protection, navigation, first aid, light, and communication.</p><p>Use a short pre-departure check:</p><code>WATER + LAYERS + MAP + LIGHT + FIRST AID</code><ul><li>Fit the load before the trip.</li><li>Keep urgent equipment accessible.</li></ul></section>
+				<section class="main-section" id="Read_the_Terrain"><h3>Read the Terrain</h3><p>Compare the map to visible ridges, trails, streams, structures, and changes in elevation.</p><p>Stop when the surroundings no longer match the plan:</p><code>STOP → OBSERVE → ORIENT → PLAN</code><ul><li>Confirm direction before increasing distance.</li><li>Notice conditions that could change the return route.</li></ul></section>
+				<section class="main-section" id="Communicate_Clearly"><h3>Communicate Clearly</h3><p>Good field communication is brief, calm, and specific. State who you are, where you are, and what is needed.</p><p>A useful report follows one consistent order:</p><code>NAME → LOCATION → CONDITION → REQUEST</code><ul><li>Repeat critical details.</li><li>Set a regroup point before separating.</li></ul></section>
+				<section class="main-section" id="Leave_No_Trace"><h3>Leave No Trace</h3><p>Use durable surfaces, respect closures, secure waste, and leave natural or historic objects in place.</p><p>The final check should be simple:</p><code>PACK IN → PACK OUT → CHECK AGAIN</code><ul><li>Minimize noise around wildlife and other visitors.</li><li>Leave the route ready for the next group.</li></ul></section>
+			</div>
 		</main>
 		<!-- Shared course footer is loaded from the components folder. -->
 		<div data-include="components/footer.html"></div>

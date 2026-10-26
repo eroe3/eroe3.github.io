@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Ethan Roe's Ethereal Raven | ITIS3135 | Inventory</title>
+		<title>Ethan Roe's Ethereal Raven | ITIS3135 | Book Inventory</title>
 		<link rel="icon" href="images/cliffethan.jpg">
 		<link rel="stylesheet" href="styles/default.css">
 		<script src="https://divonbriesen.github.io/teaching/tools/standards-check.js" defer></script>
@@ -13,19 +13,21 @@
 		<!-- Shared course header and navigation are loaded from the components folder. -->
 		<div data-include="components/header.html"></div>
 		<main>
-			<h2>Inventory</h2>
-			<img src="images/roedigital.png" alt="Roe Digital logo">
-			<p>This inventory tracks the primary resources available for current course projects.</p>
+			<h2>Book Inventory</h2>
+			<img src="images/ethereal-raven-emblem.svg" alt="Ethereal Raven Outfitters compass-and-raven emblem">
+			<p>The field library tracks practical titles selected for Ethereal Raven guides and expedition members.</p>
+			<!-- Status and rate classes implement the certification states; spans group each status and its three visual rating dots. -->
 			<table>
-				<caption>Course Project Resources</caption>
+				<caption>Ethereal Raven Field Library</caption>
 				<thead>
-					<tr><th scope="col">Resource</th><th scope="col">Category</th><th scope="col">Quantity</th></tr>
+					<tr><th scope="col">Title</th><th scope="col">Author</th><th scope="col">Category</th><th scope="col">Status</th><th scope="col">Rate</th></tr>
 				</thead>
 				<tbody>
-					<tr><td>Logo Files</td><td>Branding</td><td>2</td></tr>
-					<tr><td>HTML Pages</td><td>Content</td><td>10</td></tr>
-					<tr><td>Stylesheets</td><td>Presentation</td><td>1</td></tr>
-					<tr><td>Shared Components</td><td>Structure</td><td>2</td></tr>
+					<tr class="read"><td>The Natural Navigator</td><td>Tristan Gooley</td><td>Navigation</td><td><span class="status">Read</span></td><td><span class="rate three"><span></span><span></span><span></span></span></td></tr>
+					<tr class="in-progress"><td>Winter in the Wilderness</td><td>Dave Hall</td><td>Fieldcraft</td><td><span class="status">In Progress</span></td><td><span class="rate"><span></span><span></span><span></span></span></td></tr>
+					<tr class="to-read"><td>What the Robin Knows</td><td>Jon Young</td><td>Observation</td><td><span class="status">To Read</span></td><td><span class="rate"><span></span><span></span><span></span></span></td></tr>
+					<tr class="read"><td>Be Expert with Map and Compass</td><td>Björn Kjellström</td><td>Navigation</td><td><span class="status">Read</span></td><td><span class="rate two"><span></span><span></span><span></span></span></td></tr>
+					<tr class="read"><td>The Lost Art of Reading Nature's Signs</td><td>Tristan Gooley</td><td>Fieldcraft</td><td><span class="status">Read</span></td><td><span class="rate three"><span></span><span></span><span></span></span></td></tr>
 				</tbody>
 			</table>
 		</main>

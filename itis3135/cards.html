@@ -14,16 +14,15 @@
 		<div data-include="components/header.html"></div>
 		<main>
 			<h2>Playing Cards</h2>
-			<p>A six-card technology deck represents the tools used throughout this course.</p>
-			<!-- The card-gallery class provides the repeated responsive card layout. -->
-			<section class="card-gallery">
-				<h3>Technology Deck</h3>
-				<figure><img src="images/roedigital.png" alt="HTML card with Roe Digital emblem"><figcaption>HTML</figcaption></figure>
-				<figure><img src="images/roedigital.png" alt="CSS card with Roe Digital emblem"><figcaption>CSS</figcaption></figure>
-				<figure><img src="images/roedigital.png" alt="Accessibility card with Roe Digital emblem"><figcaption>Accessibility</figcaption></figure>
-				<figure><img src="images/roedigital.png" alt="Git card with Roe Digital emblem"><figcaption>Git</figcaption></figure>
-				<figure><img src="images/roedigital.png" alt="Validation card with Roe Digital emblem"><figcaption>Validation</figcaption></figure>
-				<figure><img src="images/roedigital.png" alt="Responsive design card with Roe Digital emblem"><figcaption>Responsive Design</figcaption></figure>
+			<p>The Raven Route deck turns six expedition skills into a compact set of field cards. Draw one before a trip to choose the day's focus.</p>
+			<!-- The playing-cards ID and card/left/middle/right classes provide the required Flexbox structure; divs group layout-only cards, and spans isolate decorative symbols. -->
+			<section id="playing-cards" aria-label="Raven Route card deck">
+				<div class="card"><p class="left">A<br>◆</p><p class="middle"><img src="images/ethereal-raven-emblem.svg" alt="Compass emblem for navigation"><strong>Navigation</strong><small>Find the quiet route</small></p><p class="right">A<br>◆</p></div>
+				<div class="card"><p class="left">K<br>◆</p><p class="middle"><img src="images/ethereal-raven-emblem.svg" alt="Raven emblem for observation"><strong>Observation</strong><small>See before moving</small></p><p class="right">K<br>◆</p></div>
+				<div class="card"><p class="left">Q<br>◆</p><p class="middle"><img src="images/ethereal-raven-emblem.svg" alt="Compass emblem for fieldcraft"><strong>Fieldcraft</strong><small>Work with terrain</small></p><p class="right">Q<br>◆</p></div>
+				<div class="card"><p class="left">J<br>◆</p><p class="middle"><img src="images/ethereal-raven-emblem.svg" alt="Raven emblem for communication"><strong>Comms</strong><small>Keep the team informed</small></p><p class="right">J<br>◆</p></div>
+				<div class="card"><p class="left">10<br>◆</p><p class="middle"><img src="images/ethereal-raven-emblem.svg" alt="Compass emblem for endurance"><strong>Endurance</strong><small>Stay ready in winter</small></p><p class="right">10<br>◆</p></div>
+				<div class="card"><p class="left">9<br>◆</p><p class="middle"><img src="images/ethereal-raven-emblem.svg" alt="Raven emblem for planning"><strong>Planning</strong><small>Prepare the return</small></p><p class="right">9<br>◆</p></div>
 			</section>
 		</main>
 		<!-- Shared course footer is loaded from the components folder. -->
